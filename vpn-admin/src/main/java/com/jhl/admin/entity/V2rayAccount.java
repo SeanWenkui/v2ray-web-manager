@@ -31,7 +31,7 @@ public class V2rayAccount {
     private String add;
     private String port;
     private String id;
-    private String aid = "64";
+    private String aid = "0";
     private String net = "ws";
     private String type = "none";
      private String host ="";
