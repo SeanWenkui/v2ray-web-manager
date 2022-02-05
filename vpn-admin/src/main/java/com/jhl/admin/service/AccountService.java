@@ -64,7 +64,7 @@ public class AccountService {
         Validator.isNotNull(account.getUserId());
         Date date = new Date();
         if (account.getBandwidth() == null) {
-            account.setBandwidth(2);
+            account.setBandwidth(1);
         }
 
         account.setAccountNo(Utils.getCharAndNum(7));
@@ -76,7 +76,7 @@ public class AccountService {
         if (account.getCycle() == null) {
             account.setCycle(KVConstant.MONTH);
         }
-        if (account.getMaxConnection() == null) account.setMaxConnection(64);
+        if (account.getMaxConnection() == null) account.setMaxConnection(128);
         if (account.getToDate() == null)
             account.setToDate(Utils.getDateBy(fromDate, KVConstant.DAY, Calendar.DAY_OF_YEAR));
         account.setStatus(1);
